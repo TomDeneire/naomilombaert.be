@@ -376,7 +376,6 @@ footer .lockup .content-wrap a:hover {
   gap: 40px;
 }
 
-/* Grouped shared styles for both images */
 .face-lockup .face-img,
 .face-lockup .face-img2 {
   border-radius: 50%;
@@ -384,16 +383,16 @@ footer .lockup .content-wrap a:hover {
   background-position: center;
   height: 200px;
   width: 200px;
-  /* Removed 'order: 3' unless you specifically need them to jump 
-     past other elements in the HTML */
 }
 
 .face-lockup .face-img {
   background-image: url(../img/naomi.jpg);
-  background-position: 50% 30%;
+  background-position: 50% 20%;
 }
 
 .face-lockup .face-img2 {
+  background-size: 120%;
+  background-position: 65% 70%;
   background-image: url(../img/ansofie.jpeg);
 }
 
@@ -401,32 +400,17 @@ footer .lockup .content-wrap a:hover {
 @media screen and (max-width: 650px) {
   .face-lockup {
     display: flex;
-    flex-direction: column; /* Stacks images vertically */
-    align-items: center; /* Centers them horizontally in the column */
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
   .face-lockup .face-img,
   .face-lockup .face-img2 {
-    margin: 0; /* Let flexbox handle the centering */
+    display: block;
+    margin: 0;
   }
 }
-@media screen and (max-width: 650px) {
-  .face-lockup {
-    display: block;
-    text-align: center;
-  }
-  .face-lockup div {
-    display: inline-block;
-  }
-  .face-lockup .face-img {
-    display: block;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0 auto 30px;
-  }
-}
-
 .blurb {
   max-width: 620px;
   padding: 0 20px;
