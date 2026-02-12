@@ -350,64 +350,49 @@ footer .lockup .content-wrap a:hover {
 
 .face-lockup {
   max-width: 780px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0 auto;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
+  display: flex;
   align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
+  /* Changed from space-between to center to bring them together */
+  justify-content: center;
+  /* Adds space between the two images without pushing them to the screen edges */
+  gap: 40px;
 }
-.face-lockup .face-img {
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/naomi.jpg);
-  height: 200px;
-  width: 200px;
-  -webkit-box-ordinal-group: 3;
-  -moz-box-ordinal-group: 3;
-  box-ordinal-group: 3;
-  -webkit-order: 3;
-  -moz-order: 3;
-  order: 3;
-  -ms-flex-order: 3;
-}
+
+/* Grouped shared styles for both images */
+.face-lockup .face-img,
 .face-lockup .face-img2 {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url(../img/ansofie.jpeg);
   height: 200px;
   width: 200px;
-  -webkit-box-ordinal-group: 3;
-  -moz-box-ordinal-group: 3;
-  box-ordinal-group: 3;
-  -webkit-order: 3;
-  -moz-order: 3;
-  order: 3;
-  -ms-flex-order: 3;
+  /* Removed 'order: 3' unless you specifically need them to jump 
+     past other elements in the HTML */
 }
 
+.face-lockup .face-img {
+  background-image: url(../img/naomi.jpg);
+}
+
+.face-lockup .face-img2 {
+  background-image: url(../img/ansofie.jpeg);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 650px) {
+  .face-lockup {
+    display: flex;
+    flex-direction: column; /* Stacks images vertically */
+    align-items: center; /* Centers them horizontally in the column */
+    gap: 20px;
+  }
+
+  .face-lockup .face-img,
+  .face-lockup .face-img2 {
+    margin: 0; /* Let flexbox handle the centering */
+  }
+}
 @media screen and (max-width: 650px) {
   .face-lockup {
     display: block;
