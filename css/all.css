@@ -373,6 +373,7 @@ footer .lockup .content-wrap a:hover {
 
 .face-lockup .face-img {
   background-image: url(../img/naomi.jpg);
+  background-position: 50% 30%;
 }
 
 .face-lockup .face-img2 {
