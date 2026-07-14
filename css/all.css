@@ -367,7 +367,7 @@ footer .lockup .content-wrap a:hover {
 
 .face-lockup {
   max-width: 780px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
   /* Changed from space-between to center to bring them together */
@@ -377,7 +377,8 @@ footer .lockup .content-wrap a:hover {
 }
 
 .face-lockup .face-img,
-.face-lockup .face-img2 {
+.face-lockup .face-img2,
+.face-lockup .face-img3 {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -396,6 +397,10 @@ footer .lockup .content-wrap a:hover {
   background-image: url(../img/ansofie.jpeg);
 }
 
+.face-lockup .face-img3 {
+  background-image: url(../img/tom.png);
+}
+
 /* Mobile Adjustments */
 @media screen and (max-width: 650px) {
   .face-lockup {
@@ -406,7 +411,8 @@ footer .lockup .content-wrap a:hover {
   }
 
   .face-lockup .face-img,
-  .face-lockup .face-img2 {
+  .face-lockup .face-img2,
+  .face-lockup .face-img3 {
     display: block;
     margin: 0;
   }
