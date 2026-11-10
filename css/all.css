@@ -263,12 +263,6 @@ fieldset {
     color: #825e4c;
 }
 
-/* Grey content section with the same bottom spacing as a white section */
-.alt-section.alt-section-compact {
-    padding-bottom: 0;
-    display: flow-root;
-}
-
 h3,
 header nav a,
 header .kicker,
@@ -321,28 +315,6 @@ header .kicker {
     font-size: 50px;
 }
 
-header .partner {
-    display: block;
-    width: max-content;
-    margin: 30px auto 0;
-    text-align: center;
-    color: #825e4c;
-}
-header .partner span {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-}
-header .partner img {
-    display: block;
-    width: 140px;
-    height: auto;
-    margin: 0 auto;
-}
-
 @media (max-width: 640px) {
     header nav {
         float: none;
@@ -357,9 +329,6 @@ header .partner img {
         text-align: right;
         padding-right: 20px;
         font-size: 20px;
-    }
-    header .partner {
-        margin: 20px 20px 0 auto;
     }
 }
 
